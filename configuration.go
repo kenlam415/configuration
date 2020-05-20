@@ -69,7 +69,7 @@ func LoadConfig(filename string, upperDirCheck bool) *Config {
 	if upperDirCheck == true {
 		newFile := directoryFallBack(filename)
 		if checkFileExists(newFile) == false {
-			log.Println("Cannot Found the Configuration file - %s", filename)
+			log.Println("Cannot Found the Configuration file - %s", newFile)
 			log.Println("Fall back to orginal file directory")
 		} else {
 			filename = newFile
