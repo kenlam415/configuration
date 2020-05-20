@@ -18,7 +18,7 @@ func TestParseKeyOrder(t *testing.T) {
 		}()
 
 		for i := 0; i < 100000; i++ {
-			conf := LoadConfig("tests/configs.conf")
+			conf := LoadConfig("tests/configs.conf", false)
 			for g := 1; g < 3; g++ {
 				for i := 1; i < 4; i++ {
 					key := fmt.Sprintf("test.out.a.b.c.d.groups.g%d.o%d.order", g, i)
